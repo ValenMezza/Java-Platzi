@@ -2,9 +2,10 @@ import static UI.UIMenu.*;
 
 public class Main {
     public static void main(String[] args) {
-       //showMenu();
-      // Doctor doc = new Doctor("valentino", "Pediatra");
-       // System.out.println(doc);
-        //Patient patient = new Patient("Nestor", "nestoy@gmail.com");
+        Patient patient = new Patient("Valentino","mezza12354@gmail.com");
+        patient.setPhoneNumber("11111111");
+        patient.setAddress("San lorenzo 501");
+        patient.setBlood("Positive");
+        System.out.println(patient);
     }
 }

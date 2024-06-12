@@ -1,54 +1,31 @@
-public class Patient {
-    private String name;
-    private String email;
-    private String adress;
-    private String phoneNumber;
+public class Patient extends User {
+    //Atributos
     private String birthday;
     private double weight;
     private double height;
     private String blood;
 
-    Patient (String name, String email){
-        this.name = name;
-        this.email= email;
+    Patient(String name, String email) {
+        super(name, email);
     }
-    public void setWeight(double weight){
+
+    // 54.5
+    public void setWeight(double weight) {
         this.weight = weight;
     }
-    public String getWeight(){
-        return this.weight + " kg .";
+
+    // 54.5 Kg. String
+    public String getWeight() {
+        return this.weight + " Kg.";
     }
 
-    public String getName() {
-        return name;
+
+    public String getHeight() {
+        return height + " Mts.";
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
-
-    public String getAdress() {
-        return adress;
-    }
-
-    public void setAdress(String adress) {
-        this.adress = adress;
+    public void setHeight(double height) {
+        this.height = height;
     }
 
     public String getBirthday() {
@@ -59,19 +36,17 @@ public class Patient {
         this.birthday = birthday;
     }
 
-    public double getHeight() {
-        return height;
-    }
-
-    public void setHeight(double height) {
-        this.height = height;
-    }
-
     public String getBlood() {
         return blood;
     }
 
     public void setBlood(String blood) {
         this.blood = blood;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString()+" Adress: "+getAddress()+
+                "\nBlood: " +getBlood();
     }
 }
