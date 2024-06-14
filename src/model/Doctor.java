@@ -1,3 +1,5 @@
+package model;
+
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -5,9 +7,9 @@ public class Doctor extends User {
     //Atributo
     private String speciality;
 
-    Doctor(String name, String email){
+    public Doctor(String name, String email){
         super(name,email);
-        System.out.println("El nombre del Doctor asignado es: " + name);
+        System.out.println("El nombre del model.Doctor asignado es: " + name);
         this.speciality = speciality;
     }
 
@@ -29,7 +31,11 @@ public class Doctor extends User {
         return availableAppointments;
     }
 
-
+    @Override
+    public String toString() {
+        return super.toString() + "\nSpeciality: "+speciality+
+                "\nAvaliable Appointments: "+getAvailableAppointments();
+    }
 
     public static class AvailableAppointment{
         private int id;
@@ -63,6 +69,15 @@ public class Doctor extends User {
 
         public void setTime(String time) {
             this.time = time;
+        }
+
+        @Override
+        public String toString() {
+            return "AvailableAppointment{" +
+                    "id=" + id +
+                    ", date=" + date +
+                    ", time='" + time + '\'' +
+                    '}';
         }
     }
 

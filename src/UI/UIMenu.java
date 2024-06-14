@@ -10,17 +10,17 @@ public class UIMenu {
         System.out.println("Select one option");
         int response = 0;
         do {
-            System.out.println("1. Doctor");
-            System.out.println("2. Patient");
+            System.out.println("1. model.Doctor");
+            System.out.println("2. model.Patient");
             System.out.println("0. Exit");
             Scanner sc = new Scanner(System.in);
             response = Integer.valueOf(sc.nextLine());
             switch (response) {
                 case 1:
-                    System.out.println("Doctor");
+                    System.out.println("model.Doctor");
                     break;
                 case 2:
-                    System.out.println("Patient");
+                    System.out.println("model.Patient");
                     showPatientMenu();
                     break;
                 case 0:

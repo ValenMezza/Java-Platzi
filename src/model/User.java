@@ -1,5 +1,7 @@
+package model;
+
 public class User {
-    private int id;
+    private int id=0;
     private String name;
     private String email;
     private String address;
@@ -8,6 +10,7 @@ public class User {
     public User(String name, String email) {
         this.name = name;
         this.email = email;
+        this.id++;
     }
 
     public int getId() {
@@ -15,7 +18,7 @@ public class User {
     }
 
     public void setId(int id) {
-        this.id = id;
+        this.id = id++;
     }
 
     public String getName() {
